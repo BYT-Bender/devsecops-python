@@ -24,7 +24,8 @@ services:
     depends_on:
       - backend
     ports:
-      - "3000:80"
+      # Map host 3000 → container 8080 (nginx-unprivileged listens on 8080)
+      - "3000:8080"
 
 volumes:
   postgres-data:
