@@ -8,9 +8,20 @@ target/
 .terraform/
 *.tfstate
 *.tfstate.*
+terraform.tfvars
 
 # Python
 __pycache__/
 *.py[cod]
 *.pyo
 *.db
+.venv/
+.venv
+*.pyc
+
+# macOS
+.DS_Store
+
+# Plan files
+capstone_implementation_plan.md
+capstone_implementation_plan_final.md
