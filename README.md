@@ -182,10 +182,13 @@ Trivy container scanning is enforced in CI with a **hard gate**: the pipeline fa
 
 Base image: `python:3.12-slim` (backend) and `nginxinc/nginx-unprivileged:alpine` (frontend).
 
-**CVE-2024-45337** — `golang.org/x/crypto` — CVSS 9.1 (CRITICAL)
-- **Affected package**: `golang.org/x/crypto` < 0.31.0
-- **Description**: Misuse of `ServerConfig.PublicKeyCallback` allows unauthorized authentication bypass in SSH servers
-- **Mitigation**: Upgrade to `golang.org/x/crypto` ≥ 0.31.0. For our Python/Nginx base images, this CVE is in OS build tooling not included in the final runtime — resolved by `--ignore-unfixed` on OS-level packages without vendor fixes.
+The first CI scan found three HIGH vulnerabilities in Starlette `0.41.3`:
+
+- **CVE-2025-62727**: inefficient parsing of crafted HTTP `Range` headers can cause denial of service in `FileResponse`. Fixed in Starlette `0.49.1`.
+- **CVE-2026-48818**: a Windows `StaticFiles` path issue can cause SSRF and NTLM credential theft. Fixed in Starlette `1.1.0`.
+- **CVE-2026-54283**: URL-encoded form limits were not enforced, creating a denial-of-service risk. Fixed in Starlette `1.3.1`.
+
+The dependency pins now use FastAPI `0.143.2` with Starlette `1.3.1`, which includes fixes for these findings. The Trivy gate remains enabled; the next CI run must confirm the updated images scan cleanly before they are pushed to GHCR. The app does not use Starlette's `FileResponse`, Windows `StaticFiles`, or URL-encoded form parsing, but the vulnerable dependency was still present and flagged by the image scan.
 
 The Trivy gate runs on the exact locally built lowercase image tags to avoid Docker Hub pull errors (the critical fix described in this plan).
 
