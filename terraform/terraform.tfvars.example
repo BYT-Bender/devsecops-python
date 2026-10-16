@@ -1,0 +1,7 @@
+# terraform.tfvars.example
+# Copy this file to terraform.tfvars and fill in your actual values.
+# DO NOT commit terraform.tfvars — it is excluded by .gitignore.
+
+aws_region   = "ap-south-1"
+cluster_name = "taskboard-eks"
+environment  = "dev"
