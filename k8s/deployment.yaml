@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: backend
-          image: nensiravaliya28/taskboard-backend:__IMAGE_TAG__
+          image: ghcr.io/byt-bender/taskboard-backend:__IMAGE_TAG__
           ports:
             - containerPort: 8000
           env:
@@ -56,6 +56,6 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: nensiravaliya28/taskboard-frontend:__IMAGE_TAG__
+          image: ghcr.io/byt-bender/taskboard-frontend:__IMAGE_TAG__
           ports:
-            - containerPort: 80
+            - containerPort: 8080

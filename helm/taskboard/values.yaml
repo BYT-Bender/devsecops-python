@@ -1,8 +1,8 @@
 frontend:
-  image: ghcr.io/YOUR_ORG/taskboard-frontend
+  image: ghcr.io/byt-bender/taskboard-frontend
   tag: latest
 backend:
-  image: ghcr.io/YOUR_ORG/taskboard-backend
+  image: ghcr.io/byt-bender/taskboard-backend
   tag: latest
 replicaCount: 2
 namespace: taskboard
@@ -21,8 +21,12 @@ hpa:
   maxReplicas: 6
   targetCPUUtilizationPercentage: 60
 resources:
-  requests: {cpu: 100m, memory: 256Mi}
-  limits: {cpu: 500m, memory: 512Mi}
+  requests:
+    cpu: 100m
+    memory: 256Mi
+  limits:
+    cpu: 500m
+    memory: 512Mi
 monitoring:
   serviceMonitor:
     enabled: true
