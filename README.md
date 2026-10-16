@@ -170,7 +170,7 @@ Trivy container scanning is enforced in CI with a **hard gate**: the pipeline fa
 
 ```yaml
 - name: Trivy Vulnerability Scan (Backend)
-  uses: aquasecurity/trivy-action@0.28.0
+  uses: aquasecurity/trivy-action@v0.36.0
   with:
     image-ref: ${{ env.BACKEND_IMAGE }}:${{ env.IMAGE_TAG }}
     severity: 'HIGH,CRITICAL'

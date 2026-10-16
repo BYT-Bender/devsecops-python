@@ -91,7 +91,7 @@ jobs:
       # ignore-unfixed filters OS bugs without vendor patches
       # ----------------------------------------------------------
       - name: Trivy Vulnerability Scan (Backend)
-        uses: aquasecurity/trivy-action@0.28.0
+        uses: aquasecurity/trivy-action@v0.36.0
         with:
           image-ref: ${{ env.BACKEND_IMAGE }}:${{ env.IMAGE_TAG }}
           scan-type: 'image'
@@ -101,7 +101,7 @@ jobs:
           format: 'table'
 
       - name: Trivy Vulnerability Scan (Frontend)
-        uses: aquasecurity/trivy-action@0.28.0
+        uses: aquasecurity/trivy-action@v0.36.0
         with:
           image-ref: ${{ env.FRONTEND_IMAGE }}:${{ env.IMAGE_TAG }}
           scan-type: 'image'
