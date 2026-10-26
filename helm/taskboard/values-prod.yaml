@@ -1,9 +1,9 @@
 frontend:
   image: ghcr.io/byt-bender/taskboard-frontend
-  tag: "d6f95ecdbbb867a7cb26b747f455b0a425d67422" # Seeded with bootstrap SHA; updated by CI on every push to main
+  tag: "6abb5510e18a958da29249d5471efce745b9b3fd" # Seeded with bootstrap SHA; updated by CI on every push to main
 backend:
   image: ghcr.io/byt-bender/taskboard-backend
-  tag: "d6f95ecdbbb867a7cb26b747f455b0a425d67422" # Seeded with bootstrap SHA; updated by CI on every push to main
+  tag: "6abb5510e18a958da29249d5471efce745b9b3fd" # Seeded with bootstrap SHA; updated by CI on every push to main
 replicaCount: 2
 ingress:
   enabled: true
