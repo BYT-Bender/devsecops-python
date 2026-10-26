@@ -437,5 +437,22 @@ devsecops-python/
 │   ├── outputs.tf
 │   ├── versions.tf
 │   └── terraform.tfvars.example
+├── demo/                         # Final capstone submission artifacts (M10)
+│   ├── presentation.pptx         # 12-slide comprehensive presentation deck
+│   ├── slides.pdf                # High-res PDF slide deck
+│   ├── slides.html               # Interactive browser slides
+│   ├── VIDEO_SCRIPT.md           # Turn-by-turn video recording script
+│   └── README.md                 # Demo artifacts guide & video link
 └── docker-compose.yml            # Local development stack
 ```
+
+---
+
+## Final Presentation & Demo Artifacts (M10)
+
+As specified in [SUBMISSION.md](./SUBMISSION.md) and [GRADING.md](./GRADING.md), all final demonstration artifacts are available in the [`demo/`](./demo/) directory:
+
+- 📊 **Presentation Slide Deck**: [`demo/presentation.pptx`](./demo/presentation.pptx) & [`demo/slides.pdf`](./demo/slides.pdf) — 12-slide deck covering project overview, architecture, tech stack, CI/CD, DevSecOps Trivy gate, Terraform IaC, Helm/K8s, GitOps with ArgoCD, observability, and key learnings.
+- 🎬 **Video Walkthrough Script**: [`demo/VIDEO_SCRIPT.md`](./demo/VIDEO_SCRIPT.md) — complete turn-by-turn script with timestamps, visual cues, and voiceover text for the mandatory video demonstration.
+- 🎥 **Mandatory Walkthrough Video**: committed as `demo/presentation.mp4` (or linked via GitHub Release asset).
+

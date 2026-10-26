@@ -25,3 +25,9 @@ __pycache__/
 # Plan files
 capstone_implementation_plan.md
 capstone_implementation_plan_final.md
+
+demo/README.md
+demo/VIDEO_SCRIPT.md
+
+scripts/generate_pptx.py
+scripts/generate_slides_pdf.py
