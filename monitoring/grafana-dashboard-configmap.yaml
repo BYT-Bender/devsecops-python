@@ -88,7 +88,7 @@ data:
           "datasource": { "type": "prometheus", "uid": "prometheus" },
           "targets": [
             {
-              "expr": "sum(http_requests_total{handler=\"/api/tasks\"})",
+              "expr": "sum(http_requests_total{handler=\"/api/tasks\"}) or vector(0)",
               "legendFormat": "Total Invocations",
               "refId": "A"
             }
