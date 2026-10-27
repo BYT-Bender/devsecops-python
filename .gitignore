@@ -28,6 +28,7 @@ capstone_implementation_plan_final.md
 
 demo/README.md
 demo/VIDEO_SCRIPT.md
+demo/slides.pdf
 
 scripts/generate_pptx.py
 scripts/generate_slides_pdf.py
